@@ -1,7 +1,7 @@
 {
   "name": "@majarzabek/dusty-components",
-  "version": "0.0.1",
-  "repository": "https://github.com/majarzabek/dusty-components.git",
+  "version": "0.0.2",
+  "repository": "git+https://github.com/majarzabek/dusty-components.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -15,7 +15,7 @@
   "license": "UNLICENSED",
   "author": "majarzabek",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "storybook": "storybook dev -p 6006",

@@ -2,6 +2,7 @@
 .storybook/
 .vscode/
 stories/
+src/
 .gitignore
 rsbuild.config.js
 tsconfig.json
