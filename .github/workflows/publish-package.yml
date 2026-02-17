@@ -25,6 +25,8 @@ jobs:
         uses: actions/setup-node@v6.2.0
         with:
           node-version: 24.13.1
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@swecon'
           
       - name: Build
         run: npm i && npm run build
@@ -33,6 +35,6 @@ jobs:
         uses: lyzhang1999/npm-publish@v1.0.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          registry: https://npm.pkg.github.com
-          access: public
+          registry: 'https://npm.pkg.github.com'
+          access: 'public'
           greater-version-only: true
