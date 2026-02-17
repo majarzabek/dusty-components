@@ -1,6 +1,6 @@
 {
   "name": "@majarzabek/dusty-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": "git+https://github.com/majarzabek/dusty-components.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

@@ -12,6 +12,8 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.js"),
       formats: ["es", "umd"],
       name: "index",
+      fileName: (format) =>
+        format == "es" ? "index.js" : `index.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
