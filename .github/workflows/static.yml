@@ -39,7 +39,7 @@ jobs:
           # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
           node-version: 24.13.1
       - name: Build Storybook
-        run: npm i && npm run build-storybook
+        run: npm i && npm run build-storybook && touch ./storybook-static/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
