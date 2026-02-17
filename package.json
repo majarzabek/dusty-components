@@ -1,6 +1,10 @@
 {
-  "name": "@swecon/dusty-components",
+  "name": "@majarzabek/dusty-components",
   "version": "0.0.1",
+  "repository": "https://github.com/majarzabek/dusty-components.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "A package with React components shared between Swecon websites, implementing the DUST design.",
   "keywords": [
     "dust",
@@ -9,7 +13,7 @@
     "ui"
   ],
   "license": "UNLICENSED",
-  "author": "Swecon",
+  "author": "majarzabek",
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
