@@ -1,19 +1,48 @@
+name: Deploy Storybook to Pages
+
 on:
   push:
-    branches:
-      - "main"
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-    - id: build-publish
-      uses: bitovi/github-actions-storybook-to-github-pages@v1.0.4
-      with:
-        path: storybook-static
-        install_command: npm i
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v6.2.0
+        with:
+          node-version: 24.13.1
+          
+      - name: Build Storybook
+        run: npm i && npm run build-storybook
+        
+      - name: Fix Storybook
+        run: sed -i 's/<head>/<head><base href="/dusty-components">/g' ./storybook-static/index.html && touch ./storybook-static/.nojekyll
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './storybook-static'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
