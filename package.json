@@ -38,7 +38,7 @@
     "@vitejs/plugin-react": "^5.1.4",
     "copyfiles": "^2.4.1",
     "css-loader": "5.2.6",
-    "sass": "1.49.9",
+    "sass": "^1.70.0",
     "sass-loader": "10.1.1",
     "storybook": "^10.2.8",
     "storybook-react-rsbuild": "^3.2.3",
