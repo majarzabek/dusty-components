@@ -36,7 +36,7 @@ jobs:
         run: npm i && npm run build-storybook
         
       - name: Fix Storybook
-        run: sed -i 's/<head>/<head><base href="\/dusty-components">/g' ./storybook-static/index.html && touch ./storybook-static/.nojekyll
+        run: sed -i 's/<head>/<head><base href="\/dusty-components\/">/g' ./storybook-static/index.html && touch ./storybook-static/.nojekyll
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
