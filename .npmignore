@@ -1,0 +1,7 @@
+.github/
+.storybook/
+.vscode/
+stories/
+.gitignore
+rsbuild.config.js
+tsconfig.json
