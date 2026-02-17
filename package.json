@@ -1,0 +1,42 @@
+{
+  "name": "@swecon/dusty-components",
+  "version": "0.0.1",
+  "description": "A package with React components shared between Swecon websites, implementing the DUST design.",
+  "keywords": [
+    "dust",
+    "swecon",
+    "react",
+    "ui"
+  ],
+  "license": "UNLICENSED",
+  "author": "Swecon",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.7.3",
+    "@rsbuild/plugin-react": "^1.4.5",
+    "@rsbuild/plugin-sass": "^1.5.0",
+    "@storybook/addon-a11y": "^10.2.8",
+    "@storybook/addon-docs": "^10.2.8",
+    "@storybook/preset-scss": "^1.0.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "css-loader": "5.2.6",
+    "sass": "1.49.9",
+    "sass-loader": "10.1.1",
+    "storybook": "^10.2.8",
+    "storybook-react-rsbuild": "^3.2.3",
+    "style-loader": "2.0.0",
+    "typescript": "^5.9.3"
+  }
+}

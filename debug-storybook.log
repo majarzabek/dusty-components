@@ -1,0 +1,21 @@
+[20:31:23.310] [INFO] storybook v10.2.8
+[20:31:25.391] [DEBUG] Getting package.json info for C:/repos/dusty-components/package.json...
+[20:31:26.385] [INFO] Starting...
+[20:31:26.752] [DEBUG] Starting preview..
+[20:31:26.772] [INFO] Addon-docs: using MDX3
+[20:31:26.852] [ERROR] Failed to build the preview
+[20:31:26.855] [ERROR] [38;2;241;97;97mError: Cannot find module 'style-loader'
+Require stack:
+- .\node_modules\@storybook\preset-scss\index.js[39m
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1448:15)
+    at require.resolve (node:internal/modules/helpers:163:19)
+    at Object.webpack (.\node_modules\@storybook\preset-scss\index.js:33:35)
+    at file:///C:/repos/dusty-components/node_modules/storybook/dist/_node-chunks/chunk-WF46L34H.js:10114:36
+    at async iframe_rsbuild_config_default (file:///C:/repos/dusty-components/node_modules/storybook-builder-rsbuild/dist/index.js:398:104)
+    at async rsbuild (file:///C:/repos/dusty-components/node_modules/storybook-builder-rsbuild/dist/index.js:703:31)
+    at async Module.start (file:///C:/repos/dusty-components/node_modules/storybook-builder-rsbuild/dist/index.js:730:65)
+    at async storybookDevServer (file:///C:/repos/dusty-components/node_modules/storybook/dist/core-server/index.js:7207:83)
+    at async buildOrThrow (file:///C:/repos/dusty-components/node_modules/storybook/dist/core-server/index.js:4504:12)
+    at async buildDevStandalone (file:///C:/repos/dusty-components/node_modules/storybook/dist/core-server/index.js:7577:66)
+[20:31:26.860] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.

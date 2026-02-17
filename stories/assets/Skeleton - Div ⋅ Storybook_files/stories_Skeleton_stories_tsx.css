@@ -1,0 +1,40 @@
+.src-Skeletons-Skeleton-module__skeleton-jQ8EAI {
+  position: relative;
+}
+
+.src-Skeletons-Skeleton-module__skeleton-jQ8EAI:before {
+  content: "";
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(261.29deg, #d9dbdb 6.64%, #fff 93.36%) 0 0 / 200% 200%;
+  width: 100%;
+  height: 100%;
+  transition: opacity .5s;
+  animation: 5s infinite alternate-reverse src-Skeletons-Skeleton-module__skeleton-loading-flBKTC;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.src-Skeletons-Skeleton-module__skeleton-jQ8EAI:not(.src-Skeletons-Skeleton-module__loaded-sIhL_w):before {
+  pointer-events: all;
+  opacity: 1;
+}
+
+@keyframes src-Skeletons-Skeleton-module__skeleton-loading-flBKTC {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+
+/*# sourceMappingURL=stories_Skeleton_stories_tsx.css.map*/
