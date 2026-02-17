@@ -37,7 +37,7 @@ jobs:
         
       - name: Fix Storybook
       
-        run: find ./storybook-static -type f -exec sed -i 's/import \'\/static/import \'.\/static/g' {} + && sed -i 's/<head>/<head><base href="\/dusty-components\/">/g' ./storybook-static/index.html && touch ./storybook-static/.nojekyll
+        run: find ./storybook-static -type f -exec sed -i 's/import '\''\/static/import '\''.\/static/g' {} + && sed -i 's/<head>/<head><base href="\/dusty-components\/">/g' ./storybook-static/index.html && touch ./storybook-static/.nojekyll
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
