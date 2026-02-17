@@ -1,6 +1,6 @@
 {
   "name": "@majarzabek/dusty-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": "git+https://github.com/majarzabek/dusty-components.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -17,7 +17,7 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && copyfiles -u 1 src/**/*.scss dist",
+    "build": "tsc --noEmit && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -35,6 +35,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
     "copyfiles": "^2.4.1",
     "css-loader": "5.2.6",
     "sass": "1.49.9",
@@ -42,6 +43,8 @@
     "storybook": "^10.2.8",
     "storybook-react-rsbuild": "^3.2.3",
     "style-loader": "2.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "unplugin-dts": "^1.0.0-beta.6",
+    "vite": "^7.3.1"
   }
 }
